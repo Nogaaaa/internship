@@ -142,7 +142,7 @@ import { MainButtonComponent } from "../components/main-button/main-button.compo
             type="password"
             [(ngModel)]="password"
             name="password"
-            placeholder="••••••••"
+            placeholder="Type Here"
             required
             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
