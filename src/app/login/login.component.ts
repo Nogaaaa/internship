@@ -77,11 +77,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { MainButtonComponent } from "../components/main-button/main-button.component";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, RouterLink, MainButtonComponent],
   template: `
    <div class="min-h-screen grid grid-cols-2">
   <!-- Left Column -->
@@ -106,11 +107,11 @@ import { RouterLink } from '@angular/router';
       <div class="text-gray-500 text-sm">
         Learn from:
         <a
-          href="https://www.encorestore.org/scorp.cat"
+          href=""
           target="_blank"
           class="text-blue-600 hover:text-blue-800"
         >
-          shop at www.encorestore.org/scorp.cat
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, voluptas doloremque dolorem dolor recusandae inventore ducimus modi mollitia cum molestiae odit aspernatur. Iusto dolorum molestiae odit impedit ipsum. Consequatur, totam! lo
         </a>
       </div>
     </div>
@@ -147,27 +148,13 @@ import { RouterLink } from '@angular/router';
           >
         </div>
 
-        <button
-          type="submit"
-          class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-        >
-          Login
-        </button>
+        <app-main-button label="Login"/>
       </form>
     </div>
   </div>
 </div>
   `,
-  styles: [
-    `@keyframes kenburns {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.1); }
-    }
-
-    .animate-kenburns {
-      animation: kenburns 20s infinite alternate;
-    }`
-  ]
+  styles: [],
 })
 export class LoginComponent {
   email: string = '';
