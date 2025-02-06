@@ -88,11 +88,11 @@ import { MainButtonComponent } from "../components/main-button/main-button.compo
   <!-- Left Column -->
   <div class="bg-regal-blue flex flex-col items-center justify-center">
     <!-- Image Wrapper -->
-    <div class="w-[80%] max-w-md">
+    <div class="w-[60%] max-w-md bg-none">
       <img
         src="/img/work-steps.png"
         alt="Background"
-        class="w-full h-auto object-contain rounded-lg shadow-lg"
+        class="w-full h-auto object-contain"
       >
     </div>
 
@@ -125,7 +125,7 @@ import { MainButtonComponent } from "../components/main-button/main-button.compo
 
       <form (ngSubmit)="onSubmit()" class="space-y-6">
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Email/ user name</label>
           <input
             type="email"
             [(ngModel)]="email"
