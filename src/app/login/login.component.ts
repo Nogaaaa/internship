@@ -153,6 +153,16 @@ import { MainButtonComponent } from "../components/main-button/main-button.compo
     </div>
   </div>
 </div>
+
+<!-- testing bootstrap and tailwind -->
+
+<!-- Use Tailwind for layout and spacing -->
+<div class="container mx-auto p-4">
+  <!-- Use Bootstrap for a button -->
+  <button class="btn btn-danger">Bootstrap Button</button>
+  <!-- Use Tailwind for a button -->
+  <button class="bg-blue-500 text-white px-4 py-2 rounded">Tailwind Button</button>
+</div>
   `,
   styles: [],
 })
