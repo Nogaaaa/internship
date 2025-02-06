@@ -83,87 +83,80 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [FormsModule, RouterLink],
   template: `
-    <div class="min-h-screen grid grid-cols-2">
-      <!-- Left Column - Moving Images/Video -->
-      <div class="bg-gray-900 relative overflow-hidden">
-        <!-- Add your image carousel/video here -->
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="text-white text-center">
-            <h2 class="text-4xl font-bold mb-4">Community Platform</h2>
-            <p class="text-gray-300">Connecting professionals worldwide</p>
-          </div>
+   <div class="min-h-screen grid grid-cols-2">
+  <!-- Left Column -->
+  <div class="bg-regal-blue flex flex-col items-center justify-center">
+    <!-- Image Wrapper -->
+    <div class="w-[80%] max-w-md">
+      <img
+        src="/img/work-steps.png"
+        alt="Background"
+        class="w-full h-auto object-contain rounded-lg shadow-lg"
+      >
+    </div>
 
-          <!-- Example image carousel (replace with your actual images/video) -->
-          <div class="absolute inset-0 z-0 opacity-50">
-            <img
-              src="https://source.unsplash.com/random/1920x1080/?tech,meeting"
-              alt="Background"
-              class="w-full h-full object-cover animate-kenburns"
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Column - Login Form -->
-      <div class="bg-gray-50 flex items-center justify-center p-8">
-        <div class="w-full max-w-md">
-          <h1 class="text-3xl font-bold text-gray-900 mb-2">Welcome back</h1>
-          <p class="text-gray-600 mb-8">Enter your email and password to sign in!</p>
-
-          <form (ngSubmit)="onSubmit()" class="space-y-6">
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-              <input
-                type="email"
-                [(ngModel)]="email"
-                name="email"
-                placeholder="user@example.com"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
-              <input
-                type="password"
-                [(ngModel)]="password"
-                name="password"
-                placeholder="••••••••"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-            </div>
-
-            <button
-              type="submit"
-              class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-            >
-              Login
-            </button>
-          </form>
-
-          <div class="mt-8 text-center space-y-4">
-            <a
-              routerLink="/explore"
-              class="text-blue-600 hover:text-blue-800 text-sm font-medium"
-            >
-              Explore More
-            </a>
-            <div class="text-gray-500 text-sm">
-              Learn from:
-              <a
-                href="https://www.encorestore.org/scorp.cat"
-                target="_blank"
-                class="text-blue-600 hover:text-blue-800"
-              >
-                shop at www.encorestore.org/scorp.cat
-              </a>
-            </div>
-          </div>
-        </div>
+    <!-- Text Below Image -->
+    <div class="mt-4 text-center space-y-2">
+      <a
+        routerLink="/explore"
+        class="text-blue-600 hover:text-blue-800 text-sm font-medium"
+      >
+        Explore More
+      </a>
+      <div class="text-gray-500 text-sm">
+        Learn from:
+        <a
+          href="https://www.encorestore.org/scorp.cat"
+          target="_blank"
+          class="text-blue-600 hover:text-blue-800"
+        >
+          shop at www.encorestore.org/scorp.cat
+        </a>
       </div>
     </div>
+  </div>
+
+  <!-- Right Column - Login Form -->
+  <div class="bg-gray-50 flex items-center justify-center p-8">
+    <div class="w-full max-w-md">
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">Welcome back</h1>
+      <p class="text-gray-600 mb-8">Enter your email and password to sign in!</p>
+
+      <form (ngSubmit)="onSubmit()" class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+          <input
+            type="email"
+            [(ngModel)]="email"
+            name="email"
+            placeholder="user@example.com"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          >
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+          <input
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            placeholder="••••••••"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
   `,
   styles: [
     `@keyframes kenburns {
