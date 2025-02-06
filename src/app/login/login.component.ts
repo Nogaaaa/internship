@@ -125,12 +125,12 @@ import { MainButtonComponent } from "../components/main-button/main-button.compo
 
       <form (ngSubmit)="onSubmit()" class="space-y-6">
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">Email/ user name</label>
+          <label class="block text-sm font-medium text-gray-700 mb-2">User Name/Email</label>
           <input
             type="email"
             [(ngModel)]="email"
             name="email"
-            placeholder="user@example.com"
+            placeholder="Type Here"
             required
             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
